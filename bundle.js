@@ -403,99 +403,100 @@ function defaultArg(arg, defaultValue, f) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Util__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Array__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ListClass__ = __webpack_require__(3);
-/* unused harmony export Enumerator */
-/* unused harmony export getEnumerator */
-/* unused harmony export toIterator */
-/* harmony export (immutable) */ __webpack_exports__["c"] = toList;
-/* unused harmony export ofList */
-/* unused harmony export ofArray */
-/* unused harmony export append */
-/* unused harmony export average */
-/* unused harmony export averageBy */
-/* unused harmony export concat */
-/* unused harmony export collect */
-/* unused harmony export choose */
-/* harmony export (immutable) */ __webpack_exports__["e"] = compareWith;
-/* unused harmony export delay */
-/* unused harmony export empty */
-/* unused harmony export enumerateWhile */
-/* unused harmony export enumerateThenFinally */
-/* unused harmony export enumerateUsing */
-/* unused harmony export exactlyOne */
-/* unused harmony export except */
-/* unused harmony export exists */
-/* unused harmony export exists2 */
-/* unused harmony export filter */
-/* unused harmony export where */
-/* harmony export (immutable) */ __webpack_exports__["a"] = fold;
-/* harmony export (immutable) */ __webpack_exports__["b"] = foldBack;
-/* unused harmony export fold2 */
-/* unused harmony export foldBack2 */
-/* unused harmony export forAll */
-/* unused harmony export forAll2 */
-/* unused harmony export tryHead */
-/* unused harmony export head */
-/* unused harmony export initialize */
-/* unused harmony export initializeInfinite */
-/* unused harmony export tryItem */
-/* unused harmony export item */
-/* unused harmony export iterate */
-/* unused harmony export iterate2 */
-/* unused harmony export iterateIndexed */
-/* unused harmony export iterateIndexed2 */
-/* unused harmony export isEmpty */
-/* unused harmony export tryLast */
-/* unused harmony export last */
-/* unused harmony export count */
-/* harmony export (immutable) */ __webpack_exports__["d"] = map;
-/* unused harmony export mapIndexed */
-/* unused harmony export map2 */
-/* unused harmony export mapIndexed2 */
-/* unused harmony export map3 */
-/* unused harmony export mapFold */
-/* unused harmony export mapFoldBack */
-/* unused harmony export max */
-/* unused harmony export maxBy */
-/* unused harmony export min */
-/* unused harmony export minBy */
-/* unused harmony export pairwise */
-/* unused harmony export permute */
-/* unused harmony export rangeStep */
-/* unused harmony export rangeChar */
-/* unused harmony export range */
-/* unused harmony export readOnly */
-/* unused harmony export reduce */
-/* unused harmony export reduceBack */
-/* unused harmony export replicate */
-/* unused harmony export reverse */
-/* unused harmony export scan */
-/* unused harmony export scanBack */
-/* unused harmony export singleton */
-/* unused harmony export skip */
-/* unused harmony export skipWhile */
-/* unused harmony export sortWith */
-/* unused harmony export sum */
-/* unused harmony export sumBy */
-/* unused harmony export tail */
-/* unused harmony export take */
-/* unused harmony export truncate */
-/* unused harmony export takeWhile */
-/* unused harmony export tryFind */
-/* unused harmony export find */
-/* unused harmony export tryFindBack */
-/* unused harmony export findBack */
-/* unused harmony export tryFindIndex */
-/* unused harmony export findIndex */
-/* unused harmony export tryFindIndexBack */
-/* unused harmony export findIndexBack */
-/* harmony export (immutable) */ __webpack_exports__["g"] = tryPick;
-/* harmony export (immutable) */ __webpack_exports__["f"] = pick;
-/* unused harmony export unfold */
-/* unused harmony export zip */
-/* unused harmony export zip3 */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Enumerator", function() { return Enumerator; });
+/* harmony export (immutable) */ __webpack_exports__["getEnumerator"] = getEnumerator;
+/* harmony export (immutable) */ __webpack_exports__["toIterator"] = toIterator;
+/* harmony export (immutable) */ __webpack_exports__["toList"] = toList;
+/* harmony export (immutable) */ __webpack_exports__["ofList"] = ofList;
+/* harmony export (immutable) */ __webpack_exports__["ofArray"] = ofArray;
+/* harmony export (immutable) */ __webpack_exports__["append"] = append;
+/* harmony export (immutable) */ __webpack_exports__["average"] = average;
+/* harmony export (immutable) */ __webpack_exports__["averageBy"] = averageBy;
+/* harmony export (immutable) */ __webpack_exports__["concat"] = concat;
+/* harmony export (immutable) */ __webpack_exports__["collect"] = collect;
+/* harmony export (immutable) */ __webpack_exports__["choose"] = choose;
+/* harmony export (immutable) */ __webpack_exports__["compareWith"] = compareWith;
+/* harmony export (immutable) */ __webpack_exports__["delay"] = delay;
+/* harmony export (immutable) */ __webpack_exports__["empty"] = empty;
+/* harmony export (immutable) */ __webpack_exports__["enumerateWhile"] = enumerateWhile;
+/* harmony export (immutable) */ __webpack_exports__["enumerateThenFinally"] = enumerateThenFinally;
+/* harmony export (immutable) */ __webpack_exports__["enumerateUsing"] = enumerateUsing;
+/* harmony export (immutable) */ __webpack_exports__["exactlyOne"] = exactlyOne;
+/* harmony export (immutable) */ __webpack_exports__["except"] = except;
+/* harmony export (immutable) */ __webpack_exports__["exists"] = exists;
+/* harmony export (immutable) */ __webpack_exports__["exists2"] = exists2;
+/* harmony export (immutable) */ __webpack_exports__["filter"] = filter;
+/* harmony export (immutable) */ __webpack_exports__["where"] = where;
+/* harmony export (immutable) */ __webpack_exports__["fold"] = fold;
+/* harmony export (immutable) */ __webpack_exports__["foldBack"] = foldBack;
+/* harmony export (immutable) */ __webpack_exports__["fold2"] = fold2;
+/* harmony export (immutable) */ __webpack_exports__["foldBack2"] = foldBack2;
+/* harmony export (immutable) */ __webpack_exports__["forAll"] = forAll;
+/* harmony export (immutable) */ __webpack_exports__["forAll2"] = forAll2;
+/* harmony export (immutable) */ __webpack_exports__["tryHead"] = tryHead;
+/* harmony export (immutable) */ __webpack_exports__["head"] = head;
+/* harmony export (immutable) */ __webpack_exports__["initialize"] = initialize;
+/* harmony export (immutable) */ __webpack_exports__["initializeInfinite"] = initializeInfinite;
+/* harmony export (immutable) */ __webpack_exports__["tryItem"] = tryItem;
+/* harmony export (immutable) */ __webpack_exports__["item"] = item;
+/* harmony export (immutable) */ __webpack_exports__["iterate"] = iterate;
+/* harmony export (immutable) */ __webpack_exports__["iterate2"] = iterate2;
+/* harmony export (immutable) */ __webpack_exports__["iterateIndexed"] = iterateIndexed;
+/* harmony export (immutable) */ __webpack_exports__["iterateIndexed2"] = iterateIndexed2;
+/* harmony export (immutable) */ __webpack_exports__["isEmpty"] = isEmpty;
+/* harmony export (immutable) */ __webpack_exports__["tryLast"] = tryLast;
+/* harmony export (immutable) */ __webpack_exports__["last"] = last;
+/* harmony export (immutable) */ __webpack_exports__["count"] = count;
+/* harmony export (immutable) */ __webpack_exports__["map"] = map;
+/* harmony export (immutable) */ __webpack_exports__["mapIndexed"] = mapIndexed;
+/* harmony export (immutable) */ __webpack_exports__["map2"] = map2;
+/* harmony export (immutable) */ __webpack_exports__["mapIndexed2"] = mapIndexed2;
+/* harmony export (immutable) */ __webpack_exports__["map3"] = map3;
+/* harmony export (immutable) */ __webpack_exports__["mapFold"] = mapFold;
+/* harmony export (immutable) */ __webpack_exports__["mapFoldBack"] = mapFoldBack;
+/* harmony export (immutable) */ __webpack_exports__["max"] = max;
+/* harmony export (immutable) */ __webpack_exports__["maxBy"] = maxBy;
+/* harmony export (immutable) */ __webpack_exports__["min"] = min;
+/* harmony export (immutable) */ __webpack_exports__["minBy"] = minBy;
+/* harmony export (immutable) */ __webpack_exports__["pairwise"] = pairwise;
+/* harmony export (immutable) */ __webpack_exports__["permute"] = permute;
+/* harmony export (immutable) */ __webpack_exports__["rangeStep"] = rangeStep;
+/* harmony export (immutable) */ __webpack_exports__["rangeChar"] = rangeChar;
+/* harmony export (immutable) */ __webpack_exports__["range"] = range;
+/* harmony export (immutable) */ __webpack_exports__["readOnly"] = readOnly;
+/* harmony export (immutable) */ __webpack_exports__["reduce"] = reduce;
+/* harmony export (immutable) */ __webpack_exports__["reduceBack"] = reduceBack;
+/* harmony export (immutable) */ __webpack_exports__["replicate"] = replicate;
+/* harmony export (immutable) */ __webpack_exports__["reverse"] = reverse;
+/* harmony export (immutable) */ __webpack_exports__["scan"] = scan;
+/* harmony export (immutable) */ __webpack_exports__["scanBack"] = scanBack;
+/* harmony export (immutable) */ __webpack_exports__["singleton"] = singleton;
+/* harmony export (immutable) */ __webpack_exports__["skip"] = skip;
+/* harmony export (immutable) */ __webpack_exports__["skipWhile"] = skipWhile;
+/* harmony export (immutable) */ __webpack_exports__["sortWith"] = sortWith;
+/* harmony export (immutable) */ __webpack_exports__["sum"] = sum;
+/* harmony export (immutable) */ __webpack_exports__["sumBy"] = sumBy;
+/* harmony export (immutable) */ __webpack_exports__["tail"] = tail;
+/* harmony export (immutable) */ __webpack_exports__["take"] = take;
+/* harmony export (immutable) */ __webpack_exports__["truncate"] = truncate;
+/* harmony export (immutable) */ __webpack_exports__["takeWhile"] = takeWhile;
+/* harmony export (immutable) */ __webpack_exports__["tryFind"] = tryFind;
+/* harmony export (immutable) */ __webpack_exports__["find"] = find;
+/* harmony export (immutable) */ __webpack_exports__["tryFindBack"] = tryFindBack;
+/* harmony export (immutable) */ __webpack_exports__["findBack"] = findBack;
+/* harmony export (immutable) */ __webpack_exports__["tryFindIndex"] = tryFindIndex;
+/* harmony export (immutable) */ __webpack_exports__["findIndex"] = findIndex;
+/* harmony export (immutable) */ __webpack_exports__["tryFindIndexBack"] = tryFindIndexBack;
+/* harmony export (immutable) */ __webpack_exports__["findIndexBack"] = findIndexBack;
+/* harmony export (immutable) */ __webpack_exports__["tryPick"] = tryPick;
+/* harmony export (immutable) */ __webpack_exports__["pick"] = pick;
+/* harmony export (immutable) */ __webpack_exports__["unfold"] = unfold;
+/* harmony export (immutable) */ __webpack_exports__["zip"] = zip;
+/* harmony export (immutable) */ __webpack_exports__["zip3"] = zip3;
 
 
 
@@ -2118,17 +2119,26 @@ var MIN_VALUE = fromBits(0, 0x80000000 | 0, false);
 
 /***/ }),
 /* 6 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_fable_core_List__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_fable_core_Seq__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_fable_core_String__ = __webpack_require__(12);
-/* harmony export (immutable) */ __webpack_exports__["foldingFunction"] = foldingFunction;
-/* harmony export (immutable) */ __webpack_exports__["solveRPN"] = solveRPN;
 
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.foldingFunction = foldingFunction;
+exports.solveRPN = solveRPN;
+
+var _List = __webpack_require__(9);
+
+var _List2 = _interopRequireDefault(_List);
+
+var _Seq = __webpack_require__(1);
+
+var _String = __webpack_require__(12);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function foldingFunction(stack, item) {
   var matchValue = [stack, item];
@@ -2136,22 +2146,22 @@ function foldingFunction(stack, item) {
 
   switch ($var1[0]) {
     case 0:
-      return new __WEBPACK_IMPORTED_MODULE_0_fable_core_List__["a" /* default */]($var1[2] + $var1[1], $var1[3]);
+      return new _List2.default($var1[2] + $var1[1], $var1[3]);
 
     case 1:
-      return new __WEBPACK_IMPORTED_MODULE_0_fable_core_List__["a" /* default */]($var1[2] - $var1[1], $var1[3]);
+      return new _List2.default($var1[2] - $var1[1], $var1[3]);
 
     case 2:
-      return new __WEBPACK_IMPORTED_MODULE_0_fable_core_List__["a" /* default */]($var1[2] * $var1[1], $var1[3]);
+      return new _List2.default($var1[2] * $var1[1], $var1[3]);
 
     case 3:
-      return new __WEBPACK_IMPORTED_MODULE_0_fable_core_List__["a" /* default */](Number.parseInt($var1[1]), $var1[2]);
+      return new _List2.default(Number.parseInt($var1[1]), $var1[2]);
   }
 }
 function solveRPN(eq) {
-  return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_fable_core_Seq__["a" /* fold */])(function (stack, item) {
+  return (0, _Seq.fold)(function (stack, item) {
     return foldingFunction(stack, item);
-  }, new __WEBPACK_IMPORTED_MODULE_0_fable_core_List__["a" /* default */](), __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_fable_core_String__["a" /* split */])(eq, " ")).head;
+  }, new _List2.default(), (0, _String.split)(eq, " ")).head;
 }
 
 /***/ }),
@@ -2281,53 +2291,54 @@ var GenericComparer = (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ListClass__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Seq__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Map__ = __webpack_require__(10);
-/* unused harmony reexport ofArray */
-/* unused harmony export append */
-/* unused harmony export choose */
-/* unused harmony export collect */
-/* unused harmony export concat */
-/* unused harmony export filter */
-/* unused harmony export where */
-/* unused harmony export initialize */
-/* unused harmony export map */
-/* unused harmony export mapIndexed */
-/* unused harmony export partition */
-/* unused harmony export replicate */
-/* unused harmony export reverse */
-/* unused harmony export singleton */
-/* unused harmony export slice */
-/* unused harmony export unzip */
-/* unused harmony export unzip3 */
-/* unused harmony export groupBy */
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "ofArray", function() { return __WEBPACK_IMPORTED_MODULE_0__ListClass__["b"]; });
+/* harmony export (immutable) */ __webpack_exports__["append"] = append;
+/* harmony export (immutable) */ __webpack_exports__["choose"] = choose;
+/* harmony export (immutable) */ __webpack_exports__["collect"] = collect;
+/* harmony export (immutable) */ __webpack_exports__["concat"] = concat;
+/* harmony export (immutable) */ __webpack_exports__["filter"] = filter;
+/* harmony export (immutable) */ __webpack_exports__["where"] = where;
+/* harmony export (immutable) */ __webpack_exports__["initialize"] = initialize;
+/* harmony export (immutable) */ __webpack_exports__["map"] = map;
+/* harmony export (immutable) */ __webpack_exports__["mapIndexed"] = mapIndexed;
+/* harmony export (immutable) */ __webpack_exports__["partition"] = partition;
+/* harmony export (immutable) */ __webpack_exports__["replicate"] = replicate;
+/* harmony export (immutable) */ __webpack_exports__["reverse"] = reverse;
+/* harmony export (immutable) */ __webpack_exports__["singleton"] = singleton;
+/* harmony export (immutable) */ __webpack_exports__["slice"] = slice;
+/* harmony export (immutable) */ __webpack_exports__["unzip"] = unzip;
+/* harmony export (immutable) */ __webpack_exports__["unzip3"] = unzip3;
+/* harmony export (immutable) */ __webpack_exports__["groupBy"] = groupBy;
 
 
 
 
 
 
-/* harmony default export */ __webpack_exports__["a"] = __WEBPACK_IMPORTED_MODULE_0__ListClass__["a" /* default */];
+/* harmony default export */ __webpack_exports__["default"] = __WEBPACK_IMPORTED_MODULE_0__ListClass__["a" /* default */];
 
 function append(xs, ys) {
-    return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__Seq__["a" /* fold */])(function (acc, x) { return new __WEBPACK_IMPORTED_MODULE_0__ListClass__["a" /* default */](x, acc); }, ys, reverse(xs));
+    return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__Seq__["fold"])(function (acc, x) { return new __WEBPACK_IMPORTED_MODULE_0__ListClass__["a" /* default */](x, acc); }, ys, reverse(xs));
 }
 function choose(f, xs) {
-    var r = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__Seq__["a" /* fold */])(function (acc, x) {
+    var r = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__Seq__["fold"])(function (acc, x) {
         var y = f(x);
         return y != null ? new __WEBPACK_IMPORTED_MODULE_0__ListClass__["a" /* default */](y, acc) : acc;
     }, new __WEBPACK_IMPORTED_MODULE_0__ListClass__["a" /* default */](), xs);
     return reverse(r);
 }
 function collect(f, xs) {
-    return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__Seq__["a" /* fold */])(function (acc, x) { return append(acc, f(x)); }, new __WEBPACK_IMPORTED_MODULE_0__ListClass__["a" /* default */](), xs);
+    return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__Seq__["fold"])(function (acc, x) { return append(acc, f(x)); }, new __WEBPACK_IMPORTED_MODULE_0__ListClass__["a" /* default */](), xs);
 }
 function concat(xs) {
     return collect(function (x) { return x; }, xs);
 }
 function filter(f, xs) {
-    return reverse(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__Seq__["a" /* fold */])(function (acc, x) { return f(x) ? new __WEBPACK_IMPORTED_MODULE_0__ListClass__["a" /* default */](x, acc) : acc; }, new __WEBPACK_IMPORTED_MODULE_0__ListClass__["a" /* default */](), xs));
+    return reverse(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__Seq__["fold"])(function (acc, x) { return f(x) ? new __WEBPACK_IMPORTED_MODULE_0__ListClass__["a" /* default */](x, acc) : acc; }, new __WEBPACK_IMPORTED_MODULE_0__ListClass__["a" /* default */](), xs));
 }
 function where(f, xs) {
     return filter(f, xs);
@@ -2343,13 +2354,13 @@ function initialize(n, f) {
     return xs;
 }
 function map(f, xs) {
-    return reverse(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__Seq__["a" /* fold */])(function (acc, x) { return new __WEBPACK_IMPORTED_MODULE_0__ListClass__["a" /* default */](f(x), acc); }, new __WEBPACK_IMPORTED_MODULE_0__ListClass__["a" /* default */](), xs));
+    return reverse(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__Seq__["fold"])(function (acc, x) { return new __WEBPACK_IMPORTED_MODULE_0__ListClass__["a" /* default */](f(x), acc); }, new __WEBPACK_IMPORTED_MODULE_0__ListClass__["a" /* default */](), xs));
 }
 function mapIndexed(f, xs) {
-    return reverse(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__Seq__["a" /* fold */])(function (acc, x, i) { return new __WEBPACK_IMPORTED_MODULE_0__ListClass__["a" /* default */](f(i, x), acc); }, new __WEBPACK_IMPORTED_MODULE_0__ListClass__["a" /* default */](), xs));
+    return reverse(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__Seq__["fold"])(function (acc, x, i) { return new __WEBPACK_IMPORTED_MODULE_0__ListClass__["a" /* default */](f(i, x), acc); }, new __WEBPACK_IMPORTED_MODULE_0__ListClass__["a" /* default */](), xs));
 }
 function partition(f, xs) {
-    return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__Seq__["a" /* fold */])(function (acc, x) {
+    return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__Seq__["fold"])(function (acc, x) {
         var lacc = acc[0], racc = acc[1];
         return f(x) ? [new __WEBPACK_IMPORTED_MODULE_0__ListClass__["a" /* default */](x, lacc), racc] : [lacc, new __WEBPACK_IMPORTED_MODULE_0__ListClass__["a" /* default */](x, racc)];
     }, [new __WEBPACK_IMPORTED_MODULE_0__ListClass__["a" /* default */](), new __WEBPACK_IMPORTED_MODULE_0__ListClass__["a" /* default */]()], reverse(xs));
@@ -2358,7 +2369,7 @@ function replicate(n, x) {
     return initialize(n, function () { return x; });
 }
 function reverse(xs) {
-    return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__Seq__["a" /* fold */])(function (acc, x) { return new __WEBPACK_IMPORTED_MODULE_0__ListClass__["a" /* default */](x, acc); }, new __WEBPACK_IMPORTED_MODULE_0__ListClass__["a" /* default */](), xs);
+    return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__Seq__["fold"])(function (acc, x) { return new __WEBPACK_IMPORTED_MODULE_0__ListClass__["a" /* default */](x, acc); }, new __WEBPACK_IMPORTED_MODULE_0__ListClass__["a" /* default */](), xs);
 }
 function singleton(x) {
     return new __WEBPACK_IMPORTED_MODULE_0__ListClass__["a" /* default */](x, new __WEBPACK_IMPORTED_MODULE_0__ListClass__["a" /* default */]());
@@ -2366,20 +2377,20 @@ function singleton(x) {
 function slice(lower, upper, xs) {
     var noLower = (lower == null);
     var noUpper = (upper == null);
-    return reverse(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__Seq__["a" /* fold */])(function (acc, x, i) { return (noLower || lower <= i) && (noUpper || i <= upper) ? new __WEBPACK_IMPORTED_MODULE_0__ListClass__["a" /* default */](x, acc) : acc; }, new __WEBPACK_IMPORTED_MODULE_0__ListClass__["a" /* default */](), xs));
+    return reverse(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__Seq__["fold"])(function (acc, x, i) { return (noLower || lower <= i) && (noUpper || i <= upper) ? new __WEBPACK_IMPORTED_MODULE_0__ListClass__["a" /* default */](x, acc) : acc; }, new __WEBPACK_IMPORTED_MODULE_0__ListClass__["a" /* default */](), xs));
 }
 function unzip(xs) {
-    return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__Seq__["b" /* foldBack */])(function (xy, acc) {
+    return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__Seq__["foldBack"])(function (xy, acc) {
         return [new __WEBPACK_IMPORTED_MODULE_0__ListClass__["a" /* default */](xy[0], acc[0]), new __WEBPACK_IMPORTED_MODULE_0__ListClass__["a" /* default */](xy[1], acc[1])];
     }, xs, [new __WEBPACK_IMPORTED_MODULE_0__ListClass__["a" /* default */](), new __WEBPACK_IMPORTED_MODULE_0__ListClass__["a" /* default */]()]);
 }
 function unzip3(xs) {
-    return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__Seq__["b" /* foldBack */])(function (xyz, acc) {
+    return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__Seq__["foldBack"])(function (xyz, acc) {
         return [new __WEBPACK_IMPORTED_MODULE_0__ListClass__["a" /* default */](xyz[0], acc[0]), new __WEBPACK_IMPORTED_MODULE_0__ListClass__["a" /* default */](xyz[1], acc[1]), new __WEBPACK_IMPORTED_MODULE_0__ListClass__["a" /* default */](xyz[2], acc[2])];
     }, xs, [new __WEBPACK_IMPORTED_MODULE_0__ListClass__["a" /* default */](), new __WEBPACK_IMPORTED_MODULE_0__ListClass__["a" /* default */](), new __WEBPACK_IMPORTED_MODULE_0__ListClass__["a" /* default */]()]);
 }
 function groupBy(f, xs) {
-    return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__Seq__["c" /* toList */])(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__Seq__["d" /* map */])(function (k) { return [k[0], __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__Seq__["c" /* toList */])(k[1])]; }, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__Map__["a" /* groupBy */])(f, xs)));
+    return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__Seq__["toList"])(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__Seq__["map"])(function (k) { return [k[0], __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__Seq__["toList"])(k[1])]; }, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__Map__["a" /* groupBy */])(f, xs)));
 }
 
 
@@ -2829,7 +2840,7 @@ var FableMap = (function () {
     };
     FableMap.prototype.CompareTo = function (m2) {
         var _this = this;
-        return this === m2 ? 0 : __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4__Seq__["e" /* compareWith */])(function (kvp1, kvp2) {
+        return this === m2 ? 0 : __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4__Seq__["compareWith"])(function (kvp1, kvp2) {
             var c = _this.comparer.Compare(kvp1[0], kvp2[0]);
             return c !== 0 ? c : __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__Util__["c" /* compare */])(kvp1[1], kvp2[1]);
         }, this, m2);
@@ -2844,10 +2855,10 @@ var FableMap = (function () {
         return this[Symbol.iterator]();
     };
     FableMap.prototype.keys = function () {
-        return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4__Seq__["d" /* map */])(function (kv) { return kv[0]; }, this);
+        return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4__Seq__["map"])(function (kv) { return kv[0]; }, this);
     };
     FableMap.prototype.values = function () {
-        return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4__Seq__["d" /* map */])(function (kv) { return kv[1]; }, this);
+        return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4__Seq__["map"])(function (kv) { return kv[1]; }, this);
     };
     FableMap.prototype.get = function (k) {
         return tree_find(this.comparer, k, this.tree);
@@ -2897,7 +2908,7 @@ function remove(item, map) {
     return from(map.comparer, tree_remove(map.comparer, item, map.tree));
 }
 function containsValue(v, map) {
-    return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4__Seq__["a" /* fold */])(function (acc, k) { return acc || __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__Util__["d" /* equals */])(map.get(k), v); }, false, map.keys());
+    return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4__Seq__["fold"])(function (acc, k) { return acc || __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__Util__["d" /* equals */])(map.get(k), v); }, false, map.keys());
 }
 function tryGetValue(map, key, defaultValue) {
     return map.has(key) ? [true, map.get(key)] : [false, defaultValue];
@@ -2937,10 +2948,10 @@ function partition(f, map) {
     return [from(map.comparer, rs[0]), from(map.comparer, rs[1])];
 }
 function findKey(f, map) {
-    return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4__Seq__["f" /* pick */])(function (kv) { return f(kv[0], kv[1]) ? kv[0] : null; }, map);
+    return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4__Seq__["pick"])(function (kv) { return f(kv[0], kv[1]) ? kv[0] : null; }, map);
 }
 function tryFindKey(f, map) {
-    return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4__Seq__["g" /* tryPick */])(function (kv) { return f(kv[0], kv[1]) ? kv[0] : null; }, map);
+    return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4__Seq__["tryPick"])(function (kv) { return f(kv[0], kv[1]) ? kv[0] : null; }, map);
 }
 function pick(f, map) {
     var res = tryPick(f, map);
@@ -3069,28 +3080,29 @@ function split(reg, input, limit, offset) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Util__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__RegExp__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Date__ = __webpack_require__(2);
-/* unused harmony export compare */
-/* unused harmony export compareTo */
-/* unused harmony export indexOfAny */
-/* unused harmony export fsFormat */
-/* unused harmony export format */
-/* unused harmony export endsWith */
-/* unused harmony export initialize */
-/* unused harmony export insert */
-/* unused harmony export isNullOrEmpty */
-/* unused harmony export isNullOrWhiteSpace */
-/* unused harmony export join */
-/* unused harmony export newGuid */
-/* unused harmony export padLeft */
-/* unused harmony export padRight */
-/* unused harmony export remove */
-/* unused harmony export replace */
-/* unused harmony export replicate */
-/* harmony export (immutable) */ __webpack_exports__["a"] = split;
-/* unused harmony export trim */
+/* harmony export (immutable) */ __webpack_exports__["compare"] = compare;
+/* harmony export (immutable) */ __webpack_exports__["compareTo"] = compareTo;
+/* harmony export (immutable) */ __webpack_exports__["indexOfAny"] = indexOfAny;
+/* harmony export (immutable) */ __webpack_exports__["fsFormat"] = fsFormat;
+/* harmony export (immutable) */ __webpack_exports__["format"] = format;
+/* harmony export (immutable) */ __webpack_exports__["endsWith"] = endsWith;
+/* harmony export (immutable) */ __webpack_exports__["initialize"] = initialize;
+/* harmony export (immutable) */ __webpack_exports__["insert"] = insert;
+/* harmony export (immutable) */ __webpack_exports__["isNullOrEmpty"] = isNullOrEmpty;
+/* harmony export (immutable) */ __webpack_exports__["isNullOrWhiteSpace"] = isNullOrWhiteSpace;
+/* harmony export (immutable) */ __webpack_exports__["join"] = join;
+/* harmony export (immutable) */ __webpack_exports__["newGuid"] = newGuid;
+/* harmony export (immutable) */ __webpack_exports__["padLeft"] = padLeft;
+/* harmony export (immutable) */ __webpack_exports__["padRight"] = padRight;
+/* harmony export (immutable) */ __webpack_exports__["remove"] = remove;
+/* harmony export (immutable) */ __webpack_exports__["replace"] = replace;
+/* harmony export (immutable) */ __webpack_exports__["replicate"] = replicate;
+/* harmony export (immutable) */ __webpack_exports__["split"] = split;
+/* harmony export (immutable) */ __webpack_exports__["trim"] = trim;
 
 
 
@@ -3624,9 +3636,12 @@ module.exports = g;
 /* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
-const RPN = __webpack_require__(6);
-console.log(RPN.solveRPN("6 2 + 5 3 - 2 * *"));
+"use strict";
 
+
+var RPN = __webpack_require__(6);
+window.RPN = RPN;
+// console.log(RPN.solveRPN("6 2 + 5 3 - 2 * *"));
 
 /***/ })
 /******/ ]);
