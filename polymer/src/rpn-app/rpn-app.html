@@ -16,6 +16,11 @@
       :host {
         display: block;
       }
+
+      .history {
+        overflow-y: scroll;
+        height: calc(100vh - 64px);
+      }
     </style>
 
     <!-- <iron-a11y-keys id="a11y" target="[[target]]" keys="enter" on-keys-pressed="_handleKeyDown"></iron-a11y-keys>
@@ -54,6 +59,40 @@
       },
 
       ready: function() {
+        this.unshift('inputHistory', "1 2 *");
+        this.unshift('inputHistory', "3 4 5 - *");
+
+
+        this.unshift('inputHistory', "1 2 *");
+        this.unshift('inputHistory', "3 4 5 - *");
+        this.unshift('inputHistory', "1 2 *");
+        this.unshift('inputHistory', "3 4 5 - *");
+        this.unshift('inputHistory', "1 2 *");
+        this.unshift('inputHistory', "3 4 5 - *");
+        this.unshift('inputHistory', "1 2 *");
+        this.unshift('inputHistory', "3 4 5 - *");
+        this.unshift('inputHistory', "1 2 *");
+        this.unshift('inputHistory', "3 4 5 - *");
+        this.unshift('inputHistory', "1 2 *");
+        this.unshift('inputHistory', "3 4 5 - *");
+        this.unshift('inputHistory', "1 2 *");
+        this.unshift('inputHistory', "3 4 5 - *");
+        this.unshift('inputHistory', "1 2 *");
+        this.unshift('inputHistory', "3 4 5 - *");
+        this.unshift('inputHistory', "1 2 *");
+        this.unshift('inputHistory', "3 4 5 - *");
+        this.unshift('inputHistory', "1 2 *");
+        this.unshift('inputHistory', "3 4 5 - *");
+        this.unshift('inputHistory', "1 2 *");
+        this.unshift('inputHistory', "3 4 5 - *");
+        this.unshift('inputHistory', "1 2 *");
+        this.unshift('inputHistory', "3 4 5 - *");
+        this.unshift('inputHistory', "1 2 *");
+        this.unshift('inputHistory', "3 4 5 - *");
+        this.unshift('inputHistory', "1 2 *");
+        this.unshift('inputHistory', "3 4 5 - *");
+        this.unshift('inputHistory', "1 2 *");
+        this.unshift('inputHistory', "3 4 5 - *");
         this.unshift('inputHistory', "1 2 *");
         this.unshift('inputHistory', "3 4 5 - *");
       },
