@@ -1,0 +1,6 @@
+{
+  "name": "rpn",
+  "short_name": "rpn",
+  "start_url": "/",
+  "display": "standalone"
+}

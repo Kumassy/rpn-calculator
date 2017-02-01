@@ -1,0 +1,54 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<link rel="import" href="../../bower_components/paper-input/paper-input.html">
+
+<!-- <link rel="import" href="../../bower_components/iron-a11y-keys-behavior/iron-a11y-keys-behavior.html"> -->
+
+<dom-module id="rpn-app">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+
+    <!-- <iron-a11y-keys id="a11y" target="[[target]]" keys="enter" on-keys-pressed="_handleKeyDown"></iron-a11y-keys>
+    <paper-input id="input"
+                 placeholder="Type something. Press enter. Check console."
+                 value="{{userInput::input}}"></paper-input> -->
+
+    <paper-input label="Floating label" on-keydown="_handleKeyDown" value="{{userInput}}"></paper-input>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'rpn-app',
+
+      properties: {
+        userInput: {
+          type: String,
+          notify: true,
+        },
+        // target: {
+        //   type: Object,
+        //   value: function() {
+        //     return this.$.input;
+        //   }
+        // },
+      },
+
+      _handleKeyDown: function(e){
+        if(e.keyCode === 13){
+          // register
+          // flush
+
+          console.log(this.userInput);
+          this.userInput = "";
+          // e.preventDefault();
+        }
+      }
+
+    });
+  </script>
+</dom-module>
