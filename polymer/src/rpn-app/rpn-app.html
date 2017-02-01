@@ -4,6 +4,12 @@
 
 <!-- <link rel="import" href="../../bower_components/iron-a11y-keys-behavior/iron-a11y-keys-behavior.html"> -->
 
+<link rel="import" href="../rpn-row/rpn-row.html">
+
+
+<script src="../../bundle.js" charset="utf-8"></script>
+
+
 <dom-module id="rpn-app">
   <template>
     <style>
@@ -17,7 +23,12 @@
                  placeholder="Type something. Press enter. Check console."
                  value="{{userInput::input}}"></paper-input> -->
 
-    <paper-input label="Floating label" on-keydown="_handleKeyDown" value="{{userInput}}"></paper-input>
+    <paper-input label="Input RPN Expression" on-keydown="_handleKeyDown" value="{{userInput}}"></paper-input>
+    <div class="history">
+      <template is="dom-repeat" items="[[inputHistory]]">
+        <rpn-row expression="[[item]]"></rpn-row>
+      </template>
+    </div>
   </template>
 
   <script>
@@ -30,6 +41,10 @@
           type: String,
           notify: true,
         },
+        inputHistory: {
+          type: Object,
+          value: []
+        }
         // target: {
         //   type: Object,
         //   value: function() {
@@ -38,12 +53,18 @@
         // },
       },
 
+      ready: function() {
+        this.unshift('inputHistory', "1 2 *");
+        this.unshift('inputHistory', "3 4 5 - *");
+      },
+
       _handleKeyDown: function(e){
         if(e.keyCode === 13){
           // register
           // flush
 
-          console.log(this.userInput);
+          this.unshift('inputHistory', this.userInput);
+          console.log(RPN.solveRPN(this.userInput));
           this.userInput = "";
           // e.preventDefault();
         }

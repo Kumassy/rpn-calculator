@@ -1,0 +1,83 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<script src="../../bundle.js" charset="utf-8"></script>
+
+
+<dom-module id="rpn-row">
+  <template>
+    <style>
+      :host {
+        display: block;
+        padding: 12px;
+      }
+      :host:after{
+        content: '';
+        clear: both;
+        display: block;
+      }
+      .expression {
+        float: left;
+        text-align: right;
+        width: 50%;
+
+        padding-right: 8px;
+        box-sizing: border-box;
+      }
+      .result {
+        float: left;
+        width: 50%;
+      }
+      .result:before {
+        content: '=';
+        display: inline-block;
+        margin-right: 4px;
+        background-color: orange;
+        color: white;
+        border-radius: 4px;
+        font-size: 20px;
+        width: 24px;
+        height: 24px;
+
+
+        line-height: 24px;
+        text-align: center;
+      }
+    </style>
+
+    <div class="expression">
+      [[expression]]
+    </div>
+
+    <div class="result">
+      [[result]]
+    </div>
+
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'rpn-row',
+
+      properties: {
+        expression: {
+          type: String,
+        },
+        result: {
+          type: Number,
+          computed: '_calculate(expression)'
+        }
+        // target: {
+        //   type: Object,
+        //   value: function() {
+        //     return this.$.input;
+        //   }
+        // },
+      },
+
+      _calculate: function(expression) {
+        return RPN.solveRPN(expression);
+      },
+    });
+  </script>
+</dom-module>
