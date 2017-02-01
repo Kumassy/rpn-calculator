@@ -2,6 +2,10 @@
 
 <link rel="import" href="../../bower_components/paper-input/paper-input.html">
 
+<link rel="import" href="../../bower_components/app-layout/app-header/app-header.html">
+<link rel="import" href="../../bower_components/app-layout/app-toolbar/app-toolbar.html">
+
+
 <!-- <link rel="import" href="../../bower_components/iron-a11y-keys-behavior/iron-a11y-keys-behavior.html"> -->
 
 <link rel="import" href="../rpn-row/rpn-row.html">
@@ -19,7 +23,19 @@
 
       .history {
         overflow-y: scroll;
-        height: calc(100vh - 64px);
+        max-height: calc(100vh - 64px - 64px - 12px);
+
+        border-bottom: 1px solid #737373;
+      }
+
+      .wrapper {
+        padding: 0px 40px;
+        padding-bottom: 12px;
+      }
+
+      app-header {
+        background-color: var(--paper-orange-700);
+        color: white;
       }
     </style>
 
@@ -28,11 +44,19 @@
                  placeholder="Type something. Press enter. Check console."
                  value="{{userInput::input}}"></paper-input> -->
 
-    <paper-input label="Input RPN Expression" on-keydown="_handleKeyDown" value="{{userInput}}"></paper-input>
-    <div class="history">
-      <template is="dom-repeat" items="[[inputHistory]]">
-        <rpn-row expression="[[item]]"></rpn-row>
-      </template>
+    <app-header fixed>
+      <app-toolbar>
+        <div main-title>RPN Calculator</div>
+      </app-toolbar>
+    </app-header>
+
+    <div class="wrapper">
+      <paper-input label="Input RPN Expression" on-keydown="_handleKeyDown" value="{{userInput}}"></paper-input>
+      <div class="history">
+        <template is="dom-repeat" items="[[inputHistory]]">
+          <rpn-row expression="[[item]]"></rpn-row>
+        </template>
+      </div>
     </div>
   </template>
 
@@ -61,40 +85,6 @@
       ready: function() {
         this.unshift('inputHistory', "1 2 *");
         this.unshift('inputHistory', "3 4 5 - *");
-
-
-        this.unshift('inputHistory', "1 2 *");
-        this.unshift('inputHistory', "3 4 5 - *");
-        this.unshift('inputHistory', "1 2 *");
-        this.unshift('inputHistory', "3 4 5 - *");
-        this.unshift('inputHistory', "1 2 *");
-        this.unshift('inputHistory', "3 4 5 - *");
-        this.unshift('inputHistory', "1 2 *");
-        this.unshift('inputHistory', "3 4 5 - *");
-        this.unshift('inputHistory', "1 2 *");
-        this.unshift('inputHistory', "3 4 5 - *");
-        this.unshift('inputHistory', "1 2 *");
-        this.unshift('inputHistory', "3 4 5 - *");
-        this.unshift('inputHistory', "1 2 *");
-        this.unshift('inputHistory', "3 4 5 - *");
-        this.unshift('inputHistory', "1 2 *");
-        this.unshift('inputHistory', "3 4 5 - *");
-        this.unshift('inputHistory', "1 2 *");
-        this.unshift('inputHistory', "3 4 5 - *");
-        this.unshift('inputHistory', "1 2 *");
-        this.unshift('inputHistory', "3 4 5 - *");
-        this.unshift('inputHistory', "1 2 *");
-        this.unshift('inputHistory', "3 4 5 - *");
-        this.unshift('inputHistory', "1 2 *");
-        this.unshift('inputHistory', "3 4 5 - *");
-        this.unshift('inputHistory', "1 2 *");
-        this.unshift('inputHistory', "3 4 5 - *");
-        this.unshift('inputHistory', "1 2 *");
-        this.unshift('inputHistory', "3 4 5 - *");
-        this.unshift('inputHistory', "1 2 *");
-        this.unshift('inputHistory', "3 4 5 - *");
-        this.unshift('inputHistory', "1 2 *");
-        this.unshift('inputHistory', "3 4 5 - *");
       },
 
       _handleKeyDown: function(e){
@@ -103,7 +93,7 @@
           // flush
 
           this.unshift('inputHistory', this.userInput);
-          console.log(RPN.solveRPN(this.userInput));
+          // console.log(RPN.solveRPN(this.userInput));
           this.userInput = "";
           // e.preventDefault();
         }
