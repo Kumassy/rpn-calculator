@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>rpn-app test</title>
+
+    <script src="../../../webcomponentsjs/webcomponents-lite.js"></script>
+    <script src="../../../web-component-tester/browser.js"></script>
+
+    <link rel="import" href="../../src/rpn-row/rpn-row.html">
+  </head>
+  <body>
+    <test-fixture id="basic">
+      <template>
+        <rpn-row expression="1 2 +"></rpn-row>
+      </template>
+    </test-fixture>
+    <test-fixture id="complex">
+      <template>
+        <rpn-row expression="4 1 6 7 - + * 10 -"></rpn-row>
+      </template>
+    </test-fixture>
+
+    <script>
+      suite('rpn-row', function() {
+        test('instantiating the element works', function() {
+          var element = fixture('basic');
+          assert.equal(element.is, 'rpn-row');
+        });
+
+        test('RPN calculation works', function() {
+          var element = fixture('basic');
+          assert.equal(element.result, 3);
+        });
+
+        test('Complex RPN calculation works', function() {
+          var element = fixture('complex');
+          assert.equal(element.result, -10);
+        });
+      });
+    </script>
+  </body>
+</html>
