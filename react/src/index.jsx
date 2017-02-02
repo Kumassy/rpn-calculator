@@ -7,8 +7,27 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
 
+const RPN = require('./rpn');
 
 injectTapEventPlugin();
+
+
+
+class RPNRow extends React.Component {
+  constructor (props){
+    super(props);
+  }
+
+  render () {
+    return (
+      <div>
+        <div className="expression">{this.props.expression}</div>
+        <div className="result">{RPN.solveRPN(this.props.expression)}</div>
+      </div>
+    );
+  }
+}
+
 
 
 class RPNApp extends React.Component {
@@ -34,7 +53,7 @@ class RPNApp extends React.Component {
       // register
       // flush
       console.log(this.state.userInput);
-      
+
       this.setState((state) => {
         return {
           userInput: '',
@@ -48,7 +67,7 @@ class RPNApp extends React.Component {
 
   render () {
     const rows = this.state.inputHistory.map((input) => {
-      return <li key={input}>{input}</li>;
+      return <RPNRow key={input} expression={input}></RPNRow>;
     });
     return (
       <MuiThemeProvider>
@@ -65,6 +84,7 @@ class RPNApp extends React.Component {
     );
   }
 }
+
 
 
 render(<RPNApp />, document.getElementById('rpn-app'));
