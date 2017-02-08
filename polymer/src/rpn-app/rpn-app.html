@@ -89,13 +89,8 @@
 
       _handleKeyDown: function(e){
         if(e.keyCode === 13){
-          // register
-          // flush
-
           this.unshift('inputHistory', this.userInput);
-          // console.log(RPN.solveRPN(this.userInput));
           this.userInput = "";
-          // e.preventDefault();
         }
       }
 
